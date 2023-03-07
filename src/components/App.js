@@ -1,5 +1,7 @@
 import '../styles/App.scss';
 //import {useEffect, useState} from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Landing from './Landing';
 //import callToApi from '../services/api';
 //import ls from '../services/localStorage';
 //import PropTypes from 'prop-types';
@@ -19,7 +21,18 @@ import '../styles/App.scss';
 
 function App() {
   return (
-    <div>Hola mundo</div>
+    <>
+    <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/" element={ 
+        <>
+        {/* <Header /> */}
+        <main className="main">
+        </main>
+        </>
+        } />    
+    </Routes>
+  </>
   );
 }
 

@@ -1,0 +1,21 @@
+@import '../core/variables.scss';
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: $first-font;
+
+    &__text{
+        font-size: 16px;
+    }
+
+    &__heart{
+        color: #ff0055c4;
+    }
+
+    &__link{
+        color: #ff0055c4;
+    }
+}
