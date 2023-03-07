@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Button = (props) => {
   return (
-    <NavLink to={"/"}>
+    <NavLink to={"/solar-system"}>
       <div className="btn-container">
         <button type="submit" name="space-button" id="space-btn">
           <span>¡Go!</span>

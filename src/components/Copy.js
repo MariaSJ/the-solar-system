@@ -6,7 +6,7 @@ const Copy = () => {
 
     return (
         <footer className="copy">
-            <p className="copy__text">Made with <span className="copy__heart">❤︎</span> by <a className="copy__link" href="https://github.com/MariaSJ" target="_blank" rel="noreferrer">María SJ </a></p>    
+            <p className="copy__text">Made with <span className="copy__heart">❤︎</span> by <a className="copy__link" href="https://github.com/MariaSJ" target="_blank" rel="noreferrer">María SJ <i className='bx bxl-github'></i></a></p>    
         </footer>
     );
 }
