@@ -9,6 +9,10 @@
 
     &__text{
         font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3px;
     }
 
     &__heart{
@@ -17,5 +21,8 @@
 
     &__link{
         color: #ff0055c4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
