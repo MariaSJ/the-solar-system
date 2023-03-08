@@ -10,6 +10,7 @@
     font-family: $first-font;
     text-transform: uppercase;
     color: $text-color;
+    border-bottom: 1px solid rgb(104, 104, 104);
 }
 
 .nav{
@@ -22,6 +23,7 @@
 
     &__name, &__toggle{
         font-size: 17px;
+        font-weight: 700;
     }
 
     &__list{

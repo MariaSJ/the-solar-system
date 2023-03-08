@@ -1,8 +1,11 @@
-import '../styles/App.scss';
+import '../styles/core/reset.scss';
+import '../styles/core/variables.scss';
+
 import {useState} from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Landing from './Landing';
 import Header from './Header';
+import Planet from './Planet';
 //import callToApi from '../services/api';
 //import ls from '../services/localStorage';
 //import PropTypes from 'prop-types';
@@ -36,19 +39,18 @@ function App() {
   return (
     <>
     <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/solar-system" element={ 
+      <Route path="/" element={<Landing />} />
+      <Route path="/solar-system" element={
         <>
-            <Header
-              handlerShowMenu={handlerShowMenu}
-              showMenu={showMenu}
-              showName={showName}  />
-          <main className="main">
-              
-          </main>
-        </>
-        } />    
-      </Routes>
+        <Header
+          handlerShowMenu={handlerShowMenu}
+          showMenu={showMenu}
+          showName={showName} />
+        <main className="main"></main>
+        </> 
+      } />
+      <Route path="/solar-system/:planet" element={<Planet/>} /> 
+    </Routes>
   </>
   );
 }

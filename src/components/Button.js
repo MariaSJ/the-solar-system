@@ -1,8 +1,10 @@
+// !! This button is from https://uiverse.io/wizard503/breezy-tiger-28. Created by https://uiverse.io/profile/wizard503
+
 import '../styles/core/reset.scss';
 import '../styles/components/button.scss';
 import { NavLink } from 'react-router-dom';
 
-const Button = (props) => {
+const Button = () => {
   return (
     <NavLink to={"/solar-system"}>
       <div className="btn-container">
