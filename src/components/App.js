@@ -1,5 +1,5 @@
 import '../styles/App.scss';
-//import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Landing from './Landing';
 import Header from './Header';
@@ -21,13 +21,28 @@ import Header from './Header';
 // }, []);
 
 function App() {
+
+  //States
+  const [showMenu, setShowMenu] = useState(false);
+  const [showName, setShowName] = useState(true);
+
+  //Handler functions
+
+  const handlerShowMenu = () => {
+    setShowMenu(!showMenu);
+    setShowName(!showName);
+  };
+
   return (
     <>
     <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/solar-system" element={ 
         <>
-          <Header />
+            <Header
+              handlerShowMenu={handlerShowMenu}
+              showMenu={showMenu}
+              showName={showName}  />
           <main className="main">
               
           </main>

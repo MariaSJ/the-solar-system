@@ -7,13 +7,18 @@ import '../styles/components/header.scss';
 
 const Header = (props) => {
 
+    const handlerChangeShowMenu = (ev) => {
+        ev.preventDefault();
+        props.handlerShowMenu();
+    };
+
     return (
         <>
             <header className="header">
                 <nav className="nav">
-                    <p className="nav__name">The Solar System</p>
+                    <p className={props.showName ? "nav__name" : "hidden"}>The Solar System</p>
 
-                    <div className="nav__menu">
+                    <div className={props.showMenu ? "nav__menu show-menu" : "nav__menu"}>
                         <ul className="nav__list">
                             <li className="nav__planet">
                                 <NavLink className="nav__link">Sun</NavLink>
@@ -43,9 +48,9 @@ const Header = (props) => {
                                 <NavLink className="nav__link">Neptune</NavLink>
                             </li>
                         </ul>
-                        <UilTimes className="nav__close"/>
+                        <UilTimes className="nav__close" onClick={handlerChangeShowMenu}/>
                     </div>
-                    <div className="nav__toggle">
+                    <div className={props.showName ? "nav__toggle" : "hidden"} onClick={handlerChangeShowMenu}>
                         <UilBars/>
                     </div>
                 </nav>
