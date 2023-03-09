@@ -3,12 +3,12 @@ import '../styles/core/variables.scss';
 
 import {useState} from 'react';
 import { Route, Routes } from 'react-router-dom';
+import {useLocation, matchPath} from 'react-router';
 import Landing from './Landing';
 import Header from './Header';
 import Planet from './Planet';
 //import callToApi from '../services/api';
 //import ls from '../services/localStorage';
-//import PropTypes from 'prop-types';
 
 // STATES
 
@@ -36,20 +36,23 @@ function App() {
     setShowName(!showName);
   };
 
+  //Routes
+  const { pathname } = useLocation();
+  const routeData = matchPath('solar-system/:planetId', pathname);
+  const planetId = routeData !== null ? routeData.params.planetId : '';
+  console.log(routeData);
+
   return (
     <>
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="/solar-system" element={
+        <Route path="/solar-system" element={
         <>
-        <Header
-          handlerShowMenu={handlerShowMenu}
-          showMenu={showMenu}
-          showName={showName} />
-        <main className="main"></main>
-        </> 
-      } />
-      <Route path="/solar-system/:planet" element={<Planet/>} /> 
+          <Header handlerShowMenu={handlerShowMenu} showMenu={showMenu} showName={showName} />
+          <main className="main"></main>
+         </> 
+      }/>
+      <Route path="/solar-system/:planetId" element={<Planet />} />  
     </Routes>
   </>
   );

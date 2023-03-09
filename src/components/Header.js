@@ -21,7 +21,7 @@ const Header = (props) => {
                     <div className={props.showMenu ? "nav__menu show-menu" : "nav__menu"}>
                         <ul className="nav__list">
                             <li className="nav__planet">
-                                <NavLink className="nav__link" to="/solar-system/:planet">Sun</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/sun">Sun</NavLink>
                             </li>
                             <li className="nav__planet">
                                 <NavLink className="nav__link" >Mercury</NavLink>
