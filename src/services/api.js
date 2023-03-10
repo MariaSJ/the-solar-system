@@ -2,9 +2,9 @@
 
 const callToApi = () => {
     // Llamamos a la API
-  return fetch('https://')
+  return fetch('./data/data.json')
     .then((response) =>
       response.json());
   };
   
-  export default callToApi;
+export default callToApi;
