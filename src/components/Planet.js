@@ -16,11 +16,11 @@ const Planet = (props) => {
                 <ul className="planet__data">
                     <li className="planet__item">
                         <h5>Planet type</h5>
-                        <p>{props.type}</p>
+                        <p>{props.bodyType}</p>
                     </li>
                     <li className="planet__item">
                         <h5>Age</h5>
-                        <p>{props.age}years</p>
+                        <p>{props.age}</p>
                     </li>
                     <li className="planet__item">
                         <h5>Temperature</h5>
