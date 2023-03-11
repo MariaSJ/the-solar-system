@@ -24,28 +24,28 @@ const Header = (props) => {
                                 <NavLink className="nav__link" to="/solar-system/sun">Sun</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link" >Mercury</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/mercury">Mercury</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Venus</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/venus">Venus</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Earth</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/earth">Earth</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Mars</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/mars">Mars</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Jupiter</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/jupiter">Jupiter</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Saturn</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/saturn">Saturn</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Uranus</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/uranus">Uranus</NavLink>
                             </li>
                             <li className="nav__planet">
-                                <NavLink className="nav__link">Neptune</NavLink>
+                                <NavLink className="nav__link" to="/solar-system/neptune">Neptune</NavLink>
                             </li>
                         </ul>
                         <UilTimes className="nav__close" onClick={handlerChangeShowMenu}/>

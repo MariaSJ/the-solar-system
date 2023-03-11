@@ -17,7 +17,6 @@ function App() {
 
   //States
   const [dataPlanets, setDataPlanets] = useState(data);
-  console.log(dataPlanets);
   const [showMenu, setShowMenu] = useState(false);
   const [showName, setShowName] = useState(true);
 
@@ -44,18 +43,39 @@ function App() {
   const { pathname } = useLocation();
   const routeData = matchPath('solar-system/:planetId', pathname);
   const planetId = routeData !== null ? routeData.params.planetId : '';
+  // const planetFound = dataPlanets.find((planet) => planet.id === planetId);
 
   return (
     <>
     <Routes>
       <Route path="/" element={<Landing />} />
-        <Route path="/solar-system" element={
+        <Route path="/solar-system/" element={
         <>
           <Header handlerShowMenu={handlerShowMenu} showMenu={showMenu} showName={showName} />
           <main className="main"></main>
          </> 
-      }/>
-      <Route path="/solar-system/:planetId" element={<Planet />} />  
+        } />
+
+        {dataPlanets.map(planet => (
+          <Route path={`/solar-system/${planetId}`} element={
+            <>
+            <Header handlerShowMenu={handlerShowMenu} showMenu={showMenu} showName={showName} />
+            <Planet
+            key={planet.id}
+            name={planet.name}
+            description={planet.description}
+            bodyType={planet.bodyType}
+            age={planet.age}
+            temperature={planet.temperature}
+            distanceSun={planet.distanceSun}
+            diameter={planet.diameter}
+            lengthYear={planet.lengthYear}
+            urlNASA={planet.urlNASA}
+            />
+          </>
+          }
+          />
+        ))} 
     </Routes>
   </>
   );
